@@ -3,8 +3,16 @@ FROM cmp1234/python:2.7.13-alpine3.6
 RUN set -ex; \
 	\
  apk add --no-cache --virtual .build-deps \
-		libressl-dev \
+		coreutils \
 		gcc \
+		curl \
+		linux-headers \
+		make \
+		musl-dev \
+		zlib \
+		zlib-dev \
+		openssl \
+		openssl-dev \
 	; \
   deps=' \
             pycrypto==2.6.1 \
