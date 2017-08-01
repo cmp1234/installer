@@ -5,12 +5,6 @@ RUN set -ex; \
  apk add --no-cache --virtual .build-deps \
 		libressl-dev \
 		gcc \
-		linux-headers \
-		musl-dev \
-		zlib \
-		zlib-dev \
-		openssl \
-		openssl-dev \
 	; \
   deps=' \
             pycrypto==2.6.1 \
