@@ -20,5 +20,5 @@ RUN set -ex; \
             PyYAML==3.11 \
         '; \
   pip install $deps; \
-	; \
+  \
   apk del .build-deps;
