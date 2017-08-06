@@ -8,6 +8,8 @@ RUN set -ex; \
 		curl \
 		linux-headers \
 		make \
+		python2-dev \
+		python3-dev \
 		musl-dev \
 		zlib \
 		zlib-dev \
