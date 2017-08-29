@@ -22,6 +22,7 @@ RUN set -ex; \
             click==6.7 \
             Jinja2==2.8 \
             PyYAML==3.11 \
+	    ansible==2.2.1.0 \
         '; \
   pip install $deps; \
   \
