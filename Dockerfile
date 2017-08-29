@@ -16,6 +16,7 @@ RUN set -ex; \
 		openssl \
 		openssl-dev \
 	; \
+  apk add --no-cache curl; \
   deps=' \
             pycrypto==2.6.1 \
             paramiko==1.17.0 \
