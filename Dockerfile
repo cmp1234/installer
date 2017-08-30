@@ -20,7 +20,7 @@ RUN set -ex; \
 		openssl \
 		openssl-dev \
 	; \
-  apk add --no-cache curl; \
+  apk add --no-cache curl libcrypto1.0; \
   /build_openssh.sh; \
   deps=' \
             pycrypto==2.6.1 \
