@@ -24,6 +24,7 @@ RUN set -ex; \
             Jinja2==2.8 \
             PyYAML==3.11 \
 	    ansible==2.2.1.0 \
+	    pexpect==4.2.1 \
         '; \
   pip install $deps; \
   \
