@@ -1,9 +1,13 @@
 FROM cmp1234/python-jre:2.7.13-8u131-alpine3.6
 
+COPY build_openssh.sh /build_openssh.sh 
+
 RUN set -ex; \
+ chmod +x /build_openssh.sh; \
 	\
  apk add --no-cache --virtual .build-deps \
 		coreutils \
+		bash \
 		gcc \
 		curl \
 		linux-headers \
@@ -17,6 +21,7 @@ RUN set -ex; \
 		openssl-dev \
 	; \
   apk add --no-cache curl; \
+  /build_openssh.sh; \
   deps=' \
             pycrypto==2.6.1 \
             paramiko==1.17.0 \
@@ -28,4 +33,6 @@ RUN set -ex; \
         '; \
   pip install $deps; \
   \
-  apk del .build-deps;
+  apk del .build-deps; \
+  ln -s /usr/local/bin/bash /bin/bash; \
+  rm -f /build_openssh.sh; 
