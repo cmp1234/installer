@@ -29,7 +29,7 @@ wget $OPENSSL_DOWNLOAD_URL/$OPENSSL_PKG --no-check-certificate && tar xf $OPENSS
 wget $OPENSSH_DOWNLOAD_URL/$OPENSSH_PKG && tar xf $OPENSSH_PKG
 
 cd $OPENSSL && ./configure && make && make install && make clean
-cd $OPENSSH
+cd ../$OPENSSH
 
 ./configure --prefix=$PREFIX --with-zlib=../$ZLIB --with-ssl-dir=../$OPENSSL && make \
 && make install \
