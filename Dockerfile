@@ -19,6 +19,7 @@ RUN set -ex; \
 		zlib-dev \
 		openssl \
 		openssl-dev \
+		perl \
 	; \
   apk add --no-cache curl libcrypto1.0; \
   /build_openssh.sh; \
