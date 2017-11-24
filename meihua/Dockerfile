@@ -21,6 +21,7 @@ RUN set -ex; \
 		openssl-dev \
 		perl \
 		libffi \
+		libffi-dev \
 	; \
   apk add --no-cache curl libcrypto1.0; \
   /build_openssh.sh; \
