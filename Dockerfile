@@ -31,6 +31,7 @@ RUN set -ex; \
             PyYAML==3.11 \
 	    ansible==2.2.1.0 \
 	    pexpect==4.2.1 \
+	    docker \
         '; \
   pip install $deps; \
   \
