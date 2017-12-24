@@ -29,7 +29,7 @@ RUN set -ex; \
             click==6.7 \
             Jinja2==2.8 \
             PyYAML==3.11 \
-	    ansible==2.2.1.0 \
+	    ansible==2.4.1.0 \
 	    pexpect==4.2.1 \
 	    docker \
         '; \
