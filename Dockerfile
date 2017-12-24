@@ -21,7 +21,7 @@ RUN set -ex; \
 		openssl-dev \
 		perl \
 	; \
-  apk add --no-cache curl libcrypto1.0; \
+  apk add --no-cache curl libcrypto1.0 sshpass; \
   /build_openssh.sh; \
   deps=' \
             pycrypto==2.6.1 \
