@@ -20,6 +20,8 @@ RUN set -ex; \
 		openssl \
 		openssl-dev \
 		perl \
+		libffi \
+		libffi-dev \
 	; \
   apk add --no-cache curl libcrypto1.0 sshpass; \
   /build_openssh.sh; \
