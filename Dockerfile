@@ -34,6 +34,7 @@ RUN set -ex; \
 	    ansible==2.4.1.0 \
 	    pexpect==4.2.1 \
 	    docker \
+	    pyaml \
         '; \
   pip install $deps; \
   \
