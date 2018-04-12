@@ -27,7 +27,7 @@ RUN set -ex; \
   /build_openssh.sh; \
   deps=' \
             pycrypto==2.6.1 \
-            paramiko==1.17.0 \
+            paramiko==1.17.6 \
             click==6.7 \
             Jinja2==2.8 \
             PyYAML==3.11 \
