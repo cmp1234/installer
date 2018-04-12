@@ -5,6 +5,7 @@ COPY build_openssh.sh /build_openssh.sh
 RUN set -ex; \
  chmod +x /build_openssh.sh; \
 	\
+ apk del python \
  apk add --no-cache --virtual .build-deps \
 		coreutils \
 		bash \
@@ -23,7 +24,7 @@ RUN set -ex; \
 		libffi \
 		libffi-dev \
 	; \
-  apk add --no-cache curl libcrypto1.0 sshpass; \
+  apk add --no-cache curl libcrypto1.0 sshpass python; \
   /build_openssh.sh; \
   deps=' \
             pycrypto==2.6.1 \
