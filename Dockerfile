@@ -5,8 +5,6 @@ COPY build_openssh.sh /build_openssh.sh
 RUN set -ex; \
  chmod +x /build_openssh.sh; \
 	\
- apk del python ;\
- apk add --no-cache python; \
  apk add --no-cache --virtual .build-deps \
 		coreutils \
 		bash \
