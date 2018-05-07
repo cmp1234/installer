@@ -36,6 +36,7 @@ RUN set -ex; \
 	    pexpect==4.2.1 \
 	    docker \
 	    pyaml \
+	    zabbix-api==0.5.3 \
         '; \
   pip install $deps; \
   \
