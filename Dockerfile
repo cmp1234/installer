@@ -22,6 +22,7 @@ RUN set -ex; \
 		perl \
 		libffi \
 		libffi-dev \
+		tar \
 	; \
   apk add --no-cache curl libcrypto1.0 sshpass python; \
   /build_openssh.sh; \
@@ -38,6 +39,8 @@ RUN set -ex; \
 	    zabbix-api==0.5.3 \
         '; \
   pip install $deps; \
+  curl -ko /usr/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl \
+  chmode +x /usr/bin/kubectl \
   \
   apk del .build-deps; \
   ln -s /usr/local/bin/bash /bin/bash; \
