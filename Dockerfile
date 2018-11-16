@@ -4,7 +4,7 @@ COPY build_openssh.sh /build_openssh.sh
 
 RUN set -ex; \
  chmod +x /build_openssh.sh; \
-	\
+ apk update \
  apk add --no-cache --virtual .build-deps \
 		coreutils \
 		bash \
