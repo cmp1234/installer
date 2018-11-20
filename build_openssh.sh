@@ -6,7 +6,7 @@ PREFIX=/usr/local/openssh
 
 OPENSSH=openssh-7.4p1
 ZLIB=zlib-1.2.11
-OPENSSL=openssl-1.0.2n
+OPENSSL=openssl-1.0.2p
 
 ZLIB_PKG=${ZLIB}.tar.gz
 OPENSSL_PKG=${OPENSSL}.tar.gz
