@@ -26,9 +26,9 @@ rm openssh -rf
 
 cd src
 
-wget $ZLIB_DOWNLOAD_URL/$ZLIB_PKG --no-check-certificate && tar xf $ZLIB_PKG
-wget $OPENSSL_DOWNLOAD_URL/$OPENSSL_PKG --no-check-certificate && tar xf $OPENSSL_PKG
-wget $OPENSSH_DOWNLOAD_URL/$OPENSSH_PKG && tar xf $OPENSSH_PKG
+curl -OLk $ZLIB_DOWNLOAD_URL/$ZLIB_PKG && tar xf $ZLIB_PKG
+curl -OLk $OPENSSL_DOWNLOAD_URL/$OPENSSL_PKG && tar xf $OPENSSL_PKG
+curl -OLk $OPENSSH_DOWNLOAD_URL/$OPENSSH_PKG && tar xf $OPENSSH_PKG
 
 cd $OPENSSL && ./config && make && make install && make clean
 cd ../$OPENSSH
