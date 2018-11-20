@@ -24,6 +24,7 @@ RUN set -ex; \
   curl -ko /usr/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl; \
   chmod +x /usr/bin/kubectl; \
   /build_openssh.sh; \
+  rm -f /build_openssh.sh; \
   deps=' \
             pycrypto==2.6.1 \
             paramiko==1.17.6 \
@@ -37,6 +38,4 @@ RUN set -ex; \
 	    zabbix-api==0.5.3 \
         '; \
   pip install $deps; \
-  apk del .build-deps; \
-  ln -s /usr/local/bin/bash /bin/bash; \
-  rm -f /build_openssh.sh; 
+  apk del .build-deps;
