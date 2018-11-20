@@ -6,7 +6,6 @@ RUN set -ex; \
  chmod +x /build_openssh.sh; \
  apk add --no-cache --virtual .build-deps \
 		coreutils \
-		bash \
 		gcc \
 		curl \
 		linux-headers \
