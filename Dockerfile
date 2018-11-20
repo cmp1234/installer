@@ -1,4 +1,4 @@
-FROM cmp1234/python-jre:2.7.15-8u181-alpine3.8
+FROM cmp1234/python-jre:2.7.15-8u181-alpine3.8-sp01
 
 COPY build_openssh.sh /build_openssh.sh 
 
